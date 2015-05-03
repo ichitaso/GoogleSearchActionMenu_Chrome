@@ -2,11 +2,19 @@
 #import <UIKit/UIKit.h>
 #import "ActionMenu.h"
 
+@interface WKContentView : UIView
+- (NSString *)selectedText;
+@end
+
 @implementation UIResponder (GoogleActionChrome)
 
 - (void)doGoogleSearchChrome:(id)sender
 {
     NSString *selection = [self selectedTextualRepresentation];
+    
+    if (selection == nil && [self respondsToSelector:@selector(selectedText)]) {
+        selection = [self selectedText];
+    }
     
     NSString *text = @"";
     if ([selection length] > 0) {
@@ -22,7 +30,7 @@
 
 - (BOOL)canGoogleSearchChrome:(id)sender
 {
-	return [[self selectedTextualRepresentation] length] > 0;
+	return YES;
 }
 
 + (void)load
