@@ -37,7 +37,7 @@
 {
 	id <AMMenuItem> menuItem = [[UIMenuController sharedMenuController]
                                 registerAction:@selector(doGoogleSearchChrome:)
-                                title:@"GoogleSearch"
+                                title:@"Google[C]"
                                 canPerform:@selector(canGoogleSearchChrome:)];
     
     menuItem.priority = 1000;

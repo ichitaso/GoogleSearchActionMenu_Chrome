@@ -4,7 +4,7 @@ Package: com.ichitaso.googleactionchrome
 Name: GoogleSearch Chrome
 Depends: firmware (>= 4.0), actionmenu
 Section: Addons (Action Menu)
-Version: 1.0-1
+Version: 1.0-2
 Architecture: iphoneos-arm
 Description: Search on Google via ActionMenu for Chrome.
 Depiction: http://ichitaso.com/apt/depiction/gsearchchrome.html
